@@ -1,0 +1,108 @@
+#top-dialog {
+
+  &,
+  &::before,
+  .dialog {
+
+    transition: all 0.6s;
+
+  }
+
+  &.overlay {
+
+    &::before {
+
+      content: '';
+      display: block;
+      width: 100%;
+      height: 100%;
+      z-index: 9999;
+
+      position: fixed;
+      top: 0;
+      left: 0;
+
+      background-color: rgba(0, 0, 0, 0.8);
+
+    }
+
+  }
+
+  .dialog {
+
+    display: block;
+    width: 100%;
+    z-index: 999999;
+
+    position: fixed;
+    top: -100%;
+    left: 0;
+
+    padding: 1.8rem;
+    text-align: center;
+
+    nav {
+
+      &, a, span {
+
+        margin-bottom: 0;
+
+      }
+
+    }
+
+    &.active {
+
+      top: 0;
+
+    }
+
+    &.alert {
+
+      background-color: $success-color;
+
+      &, a:not(.button) {
+
+        color: $white;
+
+      }
+
+    }
+
+    &.warning {
+
+      background-color: $alert-color;
+
+      &, a:not(.button) {
+
+        color: $white;
+
+      }
+
+    }
+
+    &.confirm {
+
+      background-color: $alert-color;
+
+      &, a:not(.button) {
+
+        color: $white;
+
+      }
+
+    }
+
+  }
+
+  @include breakpoint(medium) {
+
+    z-index: 999999;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+
+  }
+
+}
