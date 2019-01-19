@@ -13,3 +13,18 @@ Exercise files for the course ***Advanced Form Component with VueJs***
 ```php
 /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@#$!%*?&])[A-Za-z\d@#$!%*?&]{6,30}$/
 ```
+
+### CKEditor toolbar
+
+```javascript
+full: [
+    { name: 'document', items : [ 'Source', '-', 'Maximize'] },
+    { name: 'editing', items : [ 'Replace', '-', 'SelectAll', 'ShowBlocks' ] },
+    { name: 'clipboard', items : [ 'Cut', 'Copy', 'Paste', 'PasteText', 'PasteFromWord', '-', 'Undo', 'Redo' ] },
+    { name: 'links', items : [ 'Link', 'Unlink' ] },
+    { name: 'insert', items : [ 'Image', 'Table', 'pbckcode', 'Templates', 'qrc', 'SpecialChar' ] },
+    { name: 'basicstyles', items : [ 'Bold', 'Italic', 'Underline', 'Strike', '-', 'RemoveFormat' ] },
+    { name: 'paragraph', items : [ 'NumberedList', 'BulletedList', '-', 'Outdent', 'Indent', '-', 'Blockquote' ] },
+    { name: 'stylesmenus', items : [ 'Subscript', 'Styles', 'Format', 'CmdTokens' ] }
+]
+```
